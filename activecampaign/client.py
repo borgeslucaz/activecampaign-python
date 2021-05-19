@@ -10,7 +10,7 @@ from .users import Users
 from .webhooks import Webhooks
 from .messages import Messages
 from .tags import Tags
-
+from .accounts import Accounts
 
 class Client(object):
     BASE_URL = '{}/api/3'
@@ -28,6 +28,7 @@ class Client(object):
         self.users = Users(self)
         self.webhooks = Webhooks(self)
         self.messages = Messages(self)
+        self.accounts = Accounts(self)
         self.tags = Tags(self)
 
     def _get(self, endpoint, **kwargs):
